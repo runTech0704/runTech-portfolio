@@ -4,11 +4,9 @@ import "./top.css";
 
 const Top = () => {
     return (
-        <>
-            <div className="top-container">
-                <h1>demo</h1>
-            </div>
-        </>
+        <div className="top-container">
+                <h1>runTech</h1>
+        </div>
     )
 };
 
