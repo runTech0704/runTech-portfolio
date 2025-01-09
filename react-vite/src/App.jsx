@@ -1,14 +1,15 @@
-import { useState } from 'react'
 import './App.css'
+
 import Top from "./components/top/Top"
+import Intro from "./components/intro/Intro"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
         <Top />
+        <Intro />
       </div>
     </>
   )
