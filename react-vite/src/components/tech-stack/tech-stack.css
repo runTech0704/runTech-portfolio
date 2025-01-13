@@ -1,13 +1,17 @@
-/* From Uiverse.io by gharsh11032000 */
 .tech-stack-container{
   text-align: center;
-  align-items: center;
+}
+
+.stack-cards {
   display: flex;
+  justify-content: center; /* 子要素を水平方向に中央揃え */
+  align-items: center;    /* 子要素を垂直方向に中央揃え */
 }
 
 .stack-card-container {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 200px;
+  margin: 10px;
   position: relative;
   border-radius: 10px;
 }
@@ -15,7 +19,6 @@
 .stack-card-container::before {
     content: "";
     z-index: -1;
-    position: absolute;
     inset: 0;
     transform: translate3d(0, 0, 0) scale(0.95);
     filter: blur(20px);
@@ -55,20 +58,17 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 10px;
     color: #e8e8e8;
-    padding: 20px;
     line-height: 1.5;
     border-radius: 5px;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(50px);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
   }
 
   .stack-card .stack-content .stack-heading {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
   }
 
   .stack-card:hover .stack-content {
@@ -82,7 +82,7 @@
     filter: blur(7px);
   }
 
-  .stack-card:hover .img-content svg {
+  .stack-card:hover .img-content {
     fill: transparent;
   }
 
@@ -91,4 +91,20 @@
   }
   .stack-green {
     background: linear-gradient(-45deg, #c3f8b6 0%, #2df51b 100% );
+  }
+
+  .stack-white {
+    background: linear-gradient(-45deg, #ffffff 0%, #bebebe 100% );
+  }
+
+  .stack-purple {
+    background: linear-gradient(-45deg, #f5befc 0%, #fa71ff 100% );
+  }
+
+  .stack-orange {
+    background: linear-gradient(-45deg, #ffc793 0%, #ff9c40 100% );
+  }
+
+  .stack-yellow {
+    background: linear-gradient(-45deg, #f4ff93 0%, #ffec40 100% );
   }
