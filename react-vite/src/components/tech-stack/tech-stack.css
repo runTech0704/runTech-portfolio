@@ -1,0 +1,110 @@
+.tech-stack-container{
+  text-align: center;
+}
+
+.stack-cards {
+  display: flex;
+  justify-content: center; /* 子要素を水平方向に中央揃え */
+  align-items: center;    /* 子要素を垂直方向に中央揃え */
+}
+
+.stack-card-container {
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.stack-card-container::before {
+    content: "";
+    z-index: -1;
+    inset: 0;
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+
+  .stack-card {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+  }
+
+  .stack-card .img-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+
+  .stack-card .img-content svg {
+    width: 50px;
+    height: 50px;
+    fill: #e8e8e8;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .stack-card .stack-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #e8e8e8;
+    line-height: 1.5;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .stack-card .stack-content .stack-heading {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .stack-card:hover .stack-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stack-card:hover .img-content {
+    scale: 2.5;
+    rotate: 30deg;
+    filter: blur(7px);
+  }
+
+  .stack-card:hover .img-content {
+    fill: transparent;
+  }
+
+  .stack-blue {
+    background: linear-gradient(-45deg, #b6c7f8 0%, #1b72f5 100% );
+  }
+  .stack-green {
+    background: linear-gradient(-45deg, #c3f8b6 0%, #2df51b 100% );
+  }
+
+  .stack-white {
+    background: linear-gradient(-45deg, #ffffff 0%, #bebebe 100% );
+  }
+
+  .stack-purple {
+    background: linear-gradient(-45deg, #f5befc 0%, #fa71ff 100% );
+  }
+
+  .stack-orange {
+    background: linear-gradient(-45deg, #ffc793 0%, #ff9c40 100% );
+  }
+
+  .stack-yellow {
+    background: linear-gradient(-45deg, #f4ff93 0%, #ffec40 100% );
+  }
