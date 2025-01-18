@@ -75,7 +75,7 @@ const Cards = () => {
 
     return (
         <div className="cards-container">
-                <h1>Project</h1>
+                <h1 className="head">Works</h1>
                 <div class="cards">
                     <div class="card red" onMouseEnter={insertSentence1} onMouseLeave={removeSentence1}>
                         <p class="tip">API開発 3件</p>

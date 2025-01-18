@@ -6,7 +6,7 @@ const TechStack = () => {
 
     return (
         <div className="tech-stack-container">
-            <h1>Tech Stack</h1>
+            <h1 className="head">Tech Stack</h1>
             <div class="stack-cards">
                 <div class="stack-card-container">
                     <div class="stack-card stack-blue">
