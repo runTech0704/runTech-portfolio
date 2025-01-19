@@ -5,6 +5,7 @@ import Intro from "./components/intro/Intro"
 import Cards from './components/cards/Cards'
 import TechStack from "./components/tech-stack/TechStack"
 import Appeal from "./components/appeal/Appeal"
+import AboutMe from "./components/about-me/AboutMe"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Cards />
         <TechStack />
         <Appeal />
+        <AboutMe />
       </div>
     </>
   )
