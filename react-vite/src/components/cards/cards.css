@@ -2,13 +2,14 @@
 .cards-container {
     text-align: center;
     align-items: center;
-    margin: 3% 5%;
+    margin: 0 5%;
+    margin-top: 75px;
 }
 
     .cards {
         display: flex;
         gap: 15px;
-        margin: 10px;
+        margin: 30px 10px;
         justify-content: center; /* 子要素を水平方向に中央揃え */
         align-items: center;    /* 子要素を垂直方向に中央揃え */
     }

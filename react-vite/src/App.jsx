@@ -6,18 +6,20 @@ import Cards from './components/cards/Cards'
 import TechStack from "./components/tech-stack/TechStack"
 import Appeal from "./components/appeal/Appeal"
 import AboutMe from "./components/about-me/AboutMe"
+import Footer from "./components/footer/Footer"
 
 function App() {
 
   return (
     <>
-      <div>
+      <div className="app-container">
         <Top />
         <Intro />
         <Cards />
         <TechStack />
         <Appeal />
         <AboutMe />
+        <Footer />
       </div>
     </>
   )
