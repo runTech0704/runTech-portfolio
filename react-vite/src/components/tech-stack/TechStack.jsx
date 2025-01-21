@@ -89,6 +89,15 @@ const TechStack = () => {
                     </div>
                 </div>
             </div>
+            <div className="tech-stack-summary">
+                <blockquote class="quote-2">
+                    <p>主に Python を主要言語として開発してきました。</p>
+                    <p>GCPではApp EngineやCloud Runを始めとしたホスティングサービスやFirestoreやAlloyDB等のDBの実務経験があります。その他Cloud BuildのCIサービスや共有VPCといったネットワークサービスを構築した経験もあります。</p>
+                    <p>Google Cloudの認定資格 Cloud Professional Developer と Cloud Professional Architect も所持しています。</p>
+                    <p>Dockerについても実務で使用しています。</p>
+                    <p>Reactは実務経験はありませんが、本サイトは React と Cloud Run で作成しています。</p>
+                </blockquote>
+            </div>
         </div>
     )
 };

@@ -1,7 +1,17 @@
+/* src/components/footer */
 .footer-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 25px 10px 10px;
     background-color: #d6d6d6;
+}
+
+.footer-icons a {
+    margin-right: 10px;
+}
+
+.footer__copyright {
+    color: #f5f4f4;
+    font-size: 20px;
 }
