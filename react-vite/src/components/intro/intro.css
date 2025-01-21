@@ -1,0 +1,14 @@
+/* src/components/top.css */
+.intro-container {
+    margin: 3% 5%;
+}
+
+    .introduction {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
