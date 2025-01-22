@@ -1,5 +1,13 @@
 import React, { useState } from "react";
+
+import pythonLogo from "../../image/tech-stack/python-logo.png";
+import djangoLogo from "../../image/tech-stack/django-logo.png";
+import gcpLogo from "../../image/tech-stack/gcp-logo.png";
+import postgresqlLogo from "../../image/tech-stack/postgresql-logo.png";
+import dockerLogo from "../../image/tech-stack/docker-logo.png";
+import reactLogo from "../../image/tech-stack/react-logo.png";
 import "./tech-stack.css";
+
 
 
 const TechStack = () => {
@@ -11,7 +19,7 @@ const TechStack = () => {
                 <div class="stack-card-container">
                     <div class="stack-card stack-blue">
                         <div class="img-content">
-                            <img src="../../../public/tech-stack/python-logo.png" alt="python" />
+                            <img src={pythonLogo} alt="python" />
                         </div>
                         <div class="stack-content">
                             <p class="stack-heading">Python</p>
@@ -24,7 +32,7 @@ const TechStack = () => {
                 <div class="stack-card-container">
                     <div class="stack-card stack-green">
                         <div class="img-content">
-                            <img src="../../../public/tech-stack/django-logo.png" alt="django" />
+                            <img src={djangoLogo} alt="django" />
                         </div>
                         <div class="stack-content">
                             <p class="stack-heading">Django</p>
@@ -37,7 +45,7 @@ const TechStack = () => {
                 <div class="stack-card-container">
                     <div class="stack-card stack-white">
                         <div class="img-content">
-                            <img src="../../../public/tech-stack/gcp-logo.png" alt="gcp" />
+                            <img src={gcpLogo} alt="gcp" />
                         </div>
                         <div class="stack-content">
                             <p class="stack-heading">GCP</p>
@@ -52,7 +60,7 @@ const TechStack = () => {
                 <div class="stack-card-container">
                     <div class="stack-card stack-purple">
                         <div class="img-content">
-                            <img src="../../../public/tech-stack/postgresql-logo.png" alt="postgresql" />
+                            <img src={postgresqlLogo} alt="postgresql" />
                         </div>
                         <div class="stack-content">
                             <p class="stack-heading">PostgreSQL</p>
@@ -65,7 +73,7 @@ const TechStack = () => {
                 <div class="stack-card-container">
                     <div class="stack-card stack-orange">
                         <div class="img-content">
-                            <img src="../../../public/tech-stack/docker-logo.png" alt="docker" />
+                            <img src={dockerLogo} alt="docker" />
                         </div>
                         <div class="stack-content">
                             <p class="stack-heading">Docker</p>
@@ -78,7 +86,7 @@ const TechStack = () => {
                 <div class="stack-card-container">
                     <div class="stack-card stack-yellow">
                         <div class="img-content">
-                            <img src="../../../public/tech-stack/react-logo.png" alt="react" />
+                            <img src={reactLogo} alt="react" />
                         </div>
                         <div class="stack-content">
                             <p class="stack-heading">React</p>
