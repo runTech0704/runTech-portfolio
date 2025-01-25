@@ -1,29 +1,14 @@
+/* src/components/top.css */
 .intro-container {
-    margin: 0 5%;
-    overflow: hidden; /* スクロール時に画面外の要素を隠す */
+    margin: 3% 5%;
 }
 
-.introduction {
-    text-align: center;
-    margin: 200px 0;
-    color: #696969;
-}
+    .introduction {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-.card {
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-
-.head-center {
-    text-align: center;
-}
-
-.introduce {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding: 16px;
-    transition: box-shadow 0.3s ease;
-    margin: 50px 0 100px 0;
-}
+    .card {
+        padding: 20px;
+        border: 1px solid #ddd;
+    }

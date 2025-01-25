@@ -5,7 +5,7 @@ import "./top.css";
 const Top = () => {
     return (
         <div className="top-container">
-                <h1>runTechPortfolio</h1>
+                <h1>runTech</h1>
         </div>
     )
 };
