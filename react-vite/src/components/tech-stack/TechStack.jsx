@@ -24,7 +24,10 @@ const TechStack = () => {
                         <div class="stack-content">
                             <p class="stack-heading">Python</p>
                             <p>
-                            API 作成など。
+                                メインで使用している言語
+                            </p>
+                            <p>
+                                データ整形からAPI作成や時間計算等を実装、DBとの連携
                             </p>
                         </div>
                     </div>
@@ -37,7 +40,10 @@ const TechStack = () => {
                         <div class="stack-content">
                             <p class="stack-heading">Django</p>
                             <p>
-                            Django ORM を使用した複雑なクエリ作成や自前の Paginator を作成。
+                                実務でメインで使用しているフレームワーク
+                            </p>
+                            <p>
+                                Django ORM を使用した複雑なクエリ作成や自前の Paginator を作成。
                             </p>
                         </div>
                     </div>
@@ -50,7 +56,10 @@ const TechStack = () => {
                         <div class="stack-content">
                             <p class="stack-heading">GCP</p>
                             <p>
-                            アーキテクチャの検討・構築ができる
+                                アーキテクチャの検討・構築ができる
+                            </p>
+                            <p>
+                                認証資格を２つ取得している
                             </p>
                         </div>
                     </div>
@@ -65,7 +74,7 @@ const TechStack = () => {
                         <div class="stack-content">
                             <p class="stack-heading">PostgreSQL</p>
                             <p>
-                            RDB 権限整理
+                                データベースの作成から権限の設定
                             </p>
                         </div>
                     </div>
@@ -78,7 +87,7 @@ const TechStack = () => {
                         <div class="stack-content">
                             <p class="stack-heading">Docker</p>
                             <p>
-                            コンテナにて環境を作成
+                            コンテナを使用した環境構築・運用
                             </p>
                         </div>
                     </div>
