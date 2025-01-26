@@ -1,111 +1,69 @@
 import React, { useState } from "react";
 import "./cards.css";
 
-
 const Cards = () => {
+  const textList = [
+    ["これまで3件のAPI開発を経験", "要件の整理から参加して技術面で議論して、要件に見合う設計と実装を行ってきました"],
+    ["導入実績のない技術を導入する" ,"GCP の AlloyDB や共有VPCなどを調査から実験、導入、マニュアル作成まで一貫して担当"],
+    ["カレンダーアプリにて指定した範囲内で複数人の空き時間を計算するロジックを実装", "100人が空いている時間を1秒でわかるパフォーマンスを実現"],
+    ["新製品開発プロジェクトにバックエンドエンジニアとしてアサイン", "アイデア出しから実装まで担当"],
+    ["Google Calenar API を使用した開発", "カレンダーアプリ開発時の急な仕様変更にも対応"],
+    ["経験や思考をアウトプット", <a href="https://runtech-blog.netlify.app/">renTech Blog</a>]
+  ];
 
-    const text_list = [
-        "要件の整理から設計、実装、テストまでの一貫した開発経験",
-        "GCP の AlloyDB や共有VPCなどをプロダクトに導入",
-        "指定した範囲内で複数人の空き時間を計算",
-        "新製品開発プロジェクトにバックエンドエンジニアとしてアサイン",
-        "Google Calenar API を使用した開発",
-        "経験や思考のアウトプット",
-    ]
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    const [sentence1, setSentence1] = useState("")
-    const [sentence2, setSentence2] = useState("")
-    const [sentence3, setSentence3] = useState("")
-    const [sentence4, setSentence4] = useState("")
-    const [sentence5, setSentence5] = useState("")
-    const [sentence6, setSentence6] = useState("")
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
 
-    const insertSentence1 = () => {
-        setSentence1(text_list[0]);
-    }
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
 
-    const removeSentence1 = () => {
-        setSentence1("");
-    }
+  return (
+    <div className="cards-container">
+      <h1 className="head">Works</h1>
 
+      {/* 上段のカード */}
+      <div className="cards">
+        {textList.slice(0, 3).map((texts, index) => (
+          <div
+            key={index}
+            className={`card ${index === 0 ? "red" : index === 1 ? "blue" : "green"}`}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <p className="tip">
+              {["API開発", "新技術の導入", "複雑なロジック"][index]}
+            </p>
+            <div className="second-text">
+              {hoveredIndex === index && texts.map((text, i) => <p key={i}>{text}</p>)}
+            </div>
+          </div>
+        ))}
+      </div>
 
-    const insertSentence2 = () => {
-        setSentence2(text_list[1]);
-    }
-
-    const removeSentence2 = () => {
-        setSentence2("");
-    }
-
-    const insertSentence3 = () => {
-        setSentence3(text_list[2]);
-    }
-
-    const removeSentence3 = () => {
-        setSentence3("");
-    }
-
-
-    const insertSentence4 = () => {
-        setSentence4(text_list[3]);
-    }
-
-    const removeSentence4 = () => {
-        setSentence4("");
-    }
-
-
-    const insertSentence5 = () => {
-        setSentence5(text_list[4]);
-    }
-
-    const removeSentence5 = () => {
-        setSentence5("");
-    }
-
-
-    const insertSentence6 = () => {
-        setSentence6(text_list[5]);
-    }
-
-    const removeSentence6 = () => {
-        setSentence6("");
-    }
-
-
-    return (
-        <div className="cards-container">
-                <h1 className="head">Works</h1>
-                <div class="cards">
-                    <div class="card red" onMouseEnter={insertSentence1} onMouseLeave={removeSentence1}>
-                        <p class="tip">API開発 3件</p>
-                        <p class="second-text">{sentence1}</p>
-                    </div>
-                    <div class="card blue" onMouseEnter={insertSentence2} onMouseLeave={removeSentence2}>
-                        <p class="tip">新しい技術をプロダクトに導入</p>
-                        <p class="second-text">{sentence2}</p>
-                    </div>
-                    <div class="card green" onMouseEnter={insertSentence3} onMouseLeave={removeSentence3}>
-                        <p class="tip">複雑なロジックを実装</p>
-                        <p class="second-text">{sentence3}</p>
-                    </div>
-                </div>
-                <div class="cards">
-                    <div class="card red" onMouseEnter={insertSentence4} onMouseLeave={removeSentence4}>
-                        <p class="tip">新規開発</p>
-                        <p class="second-text">{sentence4}</p>
-                    </div>
-                    <div class="card blue" onMouseEnter={insertSentence5} onMouseLeave={removeSentence5}>
-                        <p class="tip">Google Calendar API</p>
-                        <p class="second-text">{sentence5}</p>
-                    </div>
-                    <div class="card green" onMouseEnter={insertSentence6} onMouseLeave={removeSentence6}>
-                        <p class="tip">テックブログ: runTech</p>
-                        <p class="second-text">{sentence6}</p>
-                    </div>
-                </div>
-        </div>
-    )
+      {/* 下段のカード */}
+      <div className="cards">
+        {textList.slice(3, 6).map((texts, index) => (
+          <div
+            key={index + 3}
+            className={`card ${index === 0 ? "red" : index === 1 ? "blue" : "green"}`}
+            onMouseEnter={() => handleMouseEnter(index + 3)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <p className="tip">
+              {["新規開発", "Google Calendar API", "ブログ執筆"][index]}
+            </p>
+            <div className="second-text">
+              {hoveredIndex === index + 3 && texts.map((text, i) => <p key={i}>{text}</p>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Cards;
