@@ -42,3 +42,25 @@
     font-size: 18px;
     color: #696969;
 }
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .image-box {
+        width: 200px; /* 幅と高さを縮小 */
+        height: 200px;
+        margin: 10px 20px; /* 余白を調整 */
+    }
+
+    .text-box {
+        padding: 12px;
+        font-size: 14px; /* 全体のフォントサイズを縮小 */
+    }
+
+    .text-box h2 {
+        font-size: 24px; /* 見出しのフォントサイズを縮小 */
+    }
+
+    .text-box p {
+        font-size: 14px; /* テキストのフォントサイズを縮小 */
+    }
+}

@@ -39,3 +39,9 @@
 .bubble-box p {
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .bubble-box {
+        margin: 10% 20%;
+    }
+}
