@@ -6,54 +6,84 @@
     margin-top: 75px;
 }
 
+.cards {
+    display: flex;
+    gap: 15px;
+    margin: 30px 10px;
+    justify-content: center; /* 子要素を水平方向に中央揃え */
+    align-items: center;    /* 子要素を垂直方向に中央揃え */
+}
+
+.cards .red {
+    background-color: #f5a591;
+}
+
+.cards .blue {
+    background-color: #007e9e;
+}
+
+.cards .green {
+    background-color: #18cd5e;
+}
+
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+    padding: 10px; /* テキストが飛び出さないよう余白を確保 */
+    box-sizing: border-box; /* パディングを含めた幅と高さ */
+    overflow: hidden; /* カード内に収める */
+    word-wrap: break-word; /* 長い単語を折り返す */
+}
+
+.cards .card p.tip {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cards .card p {
+    font-size: 12px;
+    margin: 0; /* 不要な余白を削除 */
+}
+
+.cards .card:hover {
+    transform: scale(1.5, 1.65);
+    z-index: 1;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
     .cards {
-        display: flex;
-        gap: 15px;
-        margin: 30px 10px;
-        justify-content: center; /* 子要素を水平方向に中央揃え */
-        align-items: center;    /* 子要素を垂直方向に中央揃え */
-    }
-
-    .cards .red {
-        background-color: #f5a591;
-    }
-
-    .cards .blue {
-        background-color: #007e9e;
-    }
-
-    .cards .green {
-        background-color: #18cd5e;
+        flex-direction: column; /* カードを縦並びに変更 */
+        gap: 20px; /* 縦方向の隙間を調整 */
+        margin: 20px 0;
     }
 
     .cards .card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        height: 200px;
-        width: 250px;
-        border-radius: 10px;
-        color: white;
-        cursor: pointer;
-        transition: 400ms;
-    }
-
-    .cards .card p.tip {
-        font-size: 20px;
-        font-weight: 700;
-    }
-
-    .cards .card p {
-        font-size: 12px;
+        height: auto; /* 高さを自動調整 */
+        width: 90%; /* モバイル画面幅に合わせる */
+        padding: 15px; /* 余白を拡大 */
+        font-size: 14px; /* 全体のフォントサイズを調整 */
+        transform: scale(1); /* 拡大縮小をリセット */
     }
 
     .cards .card:hover {
-        transform: scale(1.5, 1.65);
-        z-index: 1;
+        transform: none; /* モバイルではホバー効果を無効化 */
     }
-/*
-    .cards:hover > .card:not(:hover) {
-        transform: scale(0.9, 0.9);
-    } */
+
+    .cards .card p.tip {
+        font-size: 18px; /* 見出しのフォントサイズを縮小 */
+    }
+
+    .cards .card p {
+        font-size: 12px; /* サブテキストのフォントサイズを縮小 */
+    }
+}

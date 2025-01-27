@@ -39,3 +39,9 @@ h1, h2, h3, h4, h5, h6, p, summary {
     background: #8b7474;
     content: '';
 }
+
+@media (max-width: 768px) {
+    .head {
+        margin: 0 20%;
+    }
+}
