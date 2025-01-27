@@ -32,3 +32,16 @@
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* 影を追加 */
         padding: 10px;
     }
+
+
+@media (max-width: 768px) {
+  .top-container {
+      padding: 20px; /* モバイル用の余白を追加 */
+      width: auto;
+  }
+
+  .top-container h1 {
+      font-size: 1.8rem; /* フォントサイズを小さく調整 */
+      padding: 15px; /* モバイル用余白 */
+  }
+}

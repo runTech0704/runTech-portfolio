@@ -11,8 +11,8 @@
 }
 
 .stack-card-container {
-  width: 250px;
-  height: 200px;
+  width: 300px;
+  height: 250px;
   margin: 10px;
   position: relative;
   border-radius: 10px;
@@ -156,4 +156,12 @@
 
 .quote-2 p:last-of-type {
    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .stack-cards {
+      flex-direction: column; /* カードを縦並びに変更 */
+      justify-items: center;
+      justify-content: center;
+  }
 }

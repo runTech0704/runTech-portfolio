@@ -27,3 +27,25 @@
     transition: box-shadow 0.3s ease;
     margin: 50px 0 100px 0;
 }
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .intro-container {
+        margin: 0 3%;
+    }
+
+    .introduction {
+        margin: 100px 0;
+        font-size: 16px; /* フォントサイズを調整 */
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .introduce {
+        flex-direction: column; /* フレックス方向を縦に変更 */
+        padding: 20px;
+        margin: 30px 0; /* 余白を調整 */
+    }
+}
